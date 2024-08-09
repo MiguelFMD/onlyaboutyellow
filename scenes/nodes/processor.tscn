@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://ddj12rxu3rh6h"]
+
+[ext_resource type="Script" path="res://scenes/nodes/processor.gd" id="1_1ogqd"]
+
+[node name="Processor" type="Node2D"]
+rotation = -0.785398
+script = ExtResource("1_1ogqd")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
