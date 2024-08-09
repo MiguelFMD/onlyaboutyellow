@@ -1,0 +1,59 @@
+[gd_scene load_steps=3 format=3 uid="uid://bl13vue5xawwf"]
+
+[ext_resource type="Script" path="res://addons/advanced_radial_menu/radial_menu_class.gd" id="1_ivtbk"]
+[ext_resource type="PackedScene" uid="uid://bk1q6mm4knpf8" path="res://scenes/ui/node_button.tscn" id="2_ou1j6"]
+
+[node name="RadialMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_ivtbk")
+children_size = 66
+hover_color = Color(0.0196078, 0.0196078, 0.0196078, 0.2)
+animated_pulse_enabled = true
+
+[node name="NodeButton" parent="." instance=ExtResource("2_ou1j6")]
+layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 22.4256
+offset_top = -65.0
+offset_right = 88.4256
+offset_bottom = 1.0
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(33, 33)
+
+[node name="NodeButton2" parent="." instance=ExtResource("2_ou1j6")]
+layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = -88.4256
+offset_top = -65.0
+offset_right = -22.4256
+offset_bottom = 1.0
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(33, 33)
+node_type = 2
+
+[node name="NodeButton3" parent="." instance=ExtResource("2_ou1j6")]
+layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = -33.0
+offset_top = 31.0
+offset_right = 33.0
+offset_bottom = 97.0
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(33, 33)
+node_type = 3

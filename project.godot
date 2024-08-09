@@ -21,9 +21,21 @@ EventManager="*res://scenes/managers/event_manager.tscn"
 GameManager="*res://scenes/managers/game_manager.tscn"
 InputManager="*res://scenes/managers/input_manager.tscn"
 
+[debug]
+
+gdscript/warnings/unused_variable=0
+gdscript/warnings/unused_parameter=0
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/advanced_radial_menu/plugin.cfg")
+
+[input]
+
+fire={
+"deadzone": 0.5,
+"events": []
+}
 
 [rendering]
 

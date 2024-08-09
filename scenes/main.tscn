@@ -1,7 +1,19 @@
-[gd_scene load_steps=2 format=3 uid="uid://b1ykw1unrkjrm"]
+[gd_scene load_steps=3 format=3 uid="uid://b1ykw1unrkjrm"]
 
-[ext_resource type="PackedScene" uid="uid://cxpigskbsgss5" path="res://scenes/ui/node_selector.tscn" id="1_irekv"]
+[ext_resource type="Script" path="res://scenes/main.gd" id="1_atqch"]
+[ext_resource type="PackedScene" uid="uid://bl13vue5xawwf" path="res://scenes/ui/radial_menu.tscn" id="2_eks0j"]
 
 [node name="Main" type="Node"]
+script = ExtResource("1_atqch")
 
-[node name="NodeSelector" parent="." instance=ExtResource("1_irekv")]
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1151.0
+offset_bottom = 646.0
+
+[node name="RadialMenu" parent="Control" instance=ExtResource("2_eks0j")]
+offset_left = 621.0
+offset_top = 315.0
+offset_right = 621.0
+offset_bottom = 315.0
