@@ -1,19 +1,51 @@
-[gd_scene load_steps=3 format=3 uid="uid://b1ykw1unrkjrm"]
+[gd_scene load_steps=7 format=3 uid="uid://b1ykw1unrkjrm"]
 
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_atqch"]
-[ext_resource type="PackedScene" uid="uid://bl13vue5xawwf" path="res://scenes/ui/radial_menu.tscn" id="2_eks0j"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sa7sw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vc3qg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gjo5j"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_55kvw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n1412"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_atqch")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 1151.0
-offset_bottom = 646.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
 
-[node name="RadialMenu" parent="Control" instance=ExtResource("2_eks0j")]
-offset_left = 621.0
-offset_top = 315.0
-offset_right = 621.0
-offset_bottom = 315.0
+[node name="MarginContainer" type="MarginContainer" parent="Control"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 0
+offset_left = -1.0
+offset_right = 1151.0
+offset_bottom = 648.0
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Button" type="Button" parent="Control/MarginContainer"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_sa7sw")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_vc3qg")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_gjo5j")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_55kvw")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_n1412")
+action_mode = 0
+icon_alignment = 1
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 324)
+
+[node name="Instances" type="Node" parent="."]

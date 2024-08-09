@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://bcdqkr6jlng6t"]
+
+[ext_resource type="PackedScene" uid="uid://bk1q6mm4knpf8" path="res://scenes/ui/node_button.tscn" id="1_3do6o"]
+
+[node name="PopUp" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+scale = Vector2(0.7, 0.7)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="NodeButton" parent="VBoxContainer" instance=ExtResource("1_3do6o")]
+layout_mode = 2
+
+[node name="NodeButton2" parent="VBoxContainer" instance=ExtResource("1_3do6o")]
+layout_mode = 2
+node_type = 2
+
+[node name="NodeButton3" parent="VBoxContainer" instance=ExtResource("1_3do6o")]
+layout_mode = 2
+node_type = 3
